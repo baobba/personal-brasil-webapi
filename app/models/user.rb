@@ -41,6 +41,6 @@ class User < ActiveRecord::Base
   validates :image, allow_blank: true, file_size: { maximum: 3.megabytes.to_i,  message: "O arquivo enviado é muito grande. Tamanho máximo 3 MB."}
 
   def serializable_hash options=nil
-    super.merge "type" => type
+    super.merge("type" => type, "created_at" => created_at, "current_sign_in_at" => current_sign_in_at) 
   end
 end
