@@ -11,7 +11,7 @@ use Rack::Cors do
     origins '*'
     resource '*',
              :headers => :any,
-             :expose  => ['access-token', 'expiry', 'token-type', 'uid', 'client'],
+             :expose  => ['access-token', 'expiry', 'token-type', 'uid', 'client', 'total', 'page', 'per-page'],
              :methods => [:get, :post, :delete, :put, :patch, :options]
   end
 end
