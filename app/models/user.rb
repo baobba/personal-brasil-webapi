@@ -39,4 +39,8 @@ class User < ActiveRecord::Base
   
   mount_uploader :image, UserImageUploader
   validates :image, allow_blank: true, file_size: { maximum: 3.megabytes.to_i,  message: "O arquivo enviado é muito grande. Tamanho máximo 3 MB."}
+
+  def serializable_hash options=nil
+    super.merge "type" => type
+  end
 end
