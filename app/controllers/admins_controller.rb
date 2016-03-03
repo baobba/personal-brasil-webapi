@@ -29,7 +29,7 @@
 #
 
 class AdminsController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_admin!
   before_action :set_admin, only: [:show, :update, :destroy]
 
   # GET /admins
