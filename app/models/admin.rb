@@ -29,4 +29,5 @@
 #
 
 class Admin < User
+  
 end
