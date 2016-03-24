@@ -84,6 +84,6 @@ class PersonalsController < ApplicationController
     end
 
     def personal_params
-      params[:personal]
+      params[:personal].permit(:name, :email, :password, :password_confirmation)
     end
 end

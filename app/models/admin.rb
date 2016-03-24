@@ -29,5 +29,5 @@
 #
 
 class Admin < User
-  
+  before_create :skip_confirmation!
 end

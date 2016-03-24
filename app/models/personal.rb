@@ -29,4 +29,5 @@
 #
 
 class Personal < User
+  before_create :skip_confirmation!
 end
