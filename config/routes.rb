@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   resources :personal_clients, except: [:new, :edit]
   resources :personals, except: [:new, :edit]
   resources :clients, except: [:new, :edit]
+  resources :training_sessions, except: [:new, :edit]
 
   post 'users/update_image', to: "users#update_image"
 

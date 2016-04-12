@@ -26,8 +26,13 @@
 #  created_at             :datetime
 #  updated_at             :datetime
 #  type                   :string
+#  phone                  :string
 #
 
 class Client < User
   before_create :skip_confirmation!
+
+  has_many :personal_clients, foreign_key: "client_id", dependent: :destroy
+  has_many :scheduled_trainings, through: :personal_clients
+  has_many :training_sessions, through: :personal_clients
 end

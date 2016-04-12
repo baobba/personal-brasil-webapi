@@ -16,4 +16,8 @@
 class PersonalClient < ActiveRecord::Base
   belongs_to :personal, class_name: 'Personal'
   belongs_to :client, class_name: 'Client'
+
+  has_many :training_sessions, dependent: :destroy
+  has_many :scheduled_trainings, dependent: :destroy
+  
 end

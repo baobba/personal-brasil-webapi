@@ -19,6 +19,9 @@ gem 'kaminari'
 gem 'api-pagination'
 gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby, :x64_mingw]
 
+gem 'ice_cube'
+gem 'time_difference'
+
 group :database do
   group :postgresql do
     gem 'pg'

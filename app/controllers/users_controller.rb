@@ -26,6 +26,7 @@
 #  created_at             :datetime
 #  updated_at             :datetime
 #  type                   :string
+#  phone                  :string
 #
 
 class UsersController < ApplicationController
